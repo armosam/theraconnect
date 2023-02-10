@@ -1,0 +1,104 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+vendor
+
+# composer itself is not needed
+composer.phar
+composer.lock
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+
+# local phpunit config
+phpunit.xml
+
+# Do not store in repos it should be created by yii init
+#/web/index.php
+#/web/index-test.php
+
+#/admin/index.php
+#/admin/index-test.php
+
+#/api/index.php
+#/api/index-test.php
+
+/_protected/environments/*
+
+#/_protected/common/config/main-local.php
+#/_protected/common/config/params-local.php
+
+#/_protected/backend/config/main-local.php
+#/_protected/backend/config/params-local.php
+/_protected/backend/runtime/cache/*
+/_protected/backend/runtime/CSS/*
+/_protected/backend/runtime/debug/*
+/_protected/backend/runtime/gii*/*
+/_protected/backend/runtime/HTML/*
+/_protected/backend/runtime/logs/*
+/_protected/backend/runtime/mail/*
+/_protected/backend/runtime/URI/*
+
+#/_protected/frontend/config/main-local.php
+#/_protected/frontend/config/params-local.php
+/_protected/frontend/runtime/cache/*
+/_protected/frontend/runtime/CSS/*
+/_protected/frontend/runtime/debug/*
+/_protected/frontend/runtime/gii*/*
+/_protected/frontend/runtime/HTML/*
+/_protected/frontend/runtime/logs/*
+/_protected/frontend/runtime/mail/*
+/_protected/frontend/runtime/URI*
+
+#/_protected/api/config/main-local.php
+#/_protected/api/config/params-local.php
+/_protected/api/runtime/logs/*
+/_protected/api/runtime/cache/*
+/_protected/api/runtime/debug/*
+
+#/_protected/console/config/main-local.php
+#/_protected/console/config/params-local.php
+/_protected/console/runtime/mail/*
+/_protected/console/runtime/logs/*
+/_protected/console/runtime/cache/*
+/_protected/console/runtime/debug/*
+
+/_protected/tests/codeception/_output/*
+/_protected/tests/codeception/api/_output/*
+/_protected/tests/codeception/common/_output/*
+/_protected/tests/codeception/console/_output/*
+/_protected/tests/codeception/backend/_output/*
+/_protected/tests/codeception/frontend/_output/*
+
+# temporary assets
+/web/assets/*
+/admin/assets/*
+
+# uploads directory content
+/uploads/order_documents/*
+/uploads/credentials/*
+/uploads/articles/*
+/uploads/avatars/*
+/uploads/gallery/*
+/uploads/home/*
+
+# sitemaps
+sitemap*.xml
+
+#Do not remove empty directories with .gitkeep file
+!*.gitkeep

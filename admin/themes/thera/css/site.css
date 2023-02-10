@@ -1,0 +1,359 @@
+/** Custom styles */
+html,
+body {
+    height: 100%;
+    font-size: 15px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.label {
+    font-size: 90%;
+    font-weight: lighter;
+    padding: .27em .6em .3em;
+    line-height: 2.2;
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+.footer {
+    height: 60px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/*-- Sorting --*/
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+/*-- Other --*/
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.table td.vertical-top, .table th.vertical-top {
+    vertical-align: top;
+}
+
+.table td.vertical-middle, .table th.vertical-middle {
+    vertical-align: middle;
+}
+
+.table td.vertical-bottom, .table th.vertical-bottom {
+    vertical-align: bottom;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* add red asterisk to required form fields */
+div.required label:after {
+    content: " *";
+    color: #e13431;
+}
+
+.login {
+    margin-top: 0;
+}
+
+/*-- GridView options display tweaks --*/
+
+.user-index td:last-child,
+.articles-admin td:last-child {
+    width: 68px;
+}
+
+.article-view th {
+    min-width: 90px;
+}
+
+.grouped-row-css {
+    padding: 20px 5px 10px 5px !important;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*-- Css for nicer display of boolean yes/no values --*/
+
+.boolean-true {
+    font-weight: bold;
+    color: #00b100;
+}
+
+.boolean-false {
+    font-weight: bold;
+    color: #e34542;
+}
+
+.status, .role, .color {
+    font-weight: bold;
+}
+
+/*-- Css for nicer display of user roles --*/
+.role-thecreator {
+    color: #1f71f9;
+}
+.role-admin {
+    color: #faa123;
+}
+.role-editor {
+    color: #00b100;
+}
+.role-provider {
+    color: #ca3aff;
+}
+.role-customer {
+    color: #00bcdc
+}
+
+/*-- Css for nicer display of user statuses --*/
+.user-status-a {
+    color: #00b100;
+}
+.user-status-n {
+    color: #7788ff;
+}
+.user-status-i {
+    color: #faa123;
+}
+.user-status-s {
+    color: #c46001;
+}
+.user-status-t {
+    color: #e34542;
+}
+
+/*-- Css for nicer display of order statuses --*/
+.order-status-p {
+    color: #636363;
+}
+.order-status-s {
+    color: #ff0000;
+}
+.order-status-a {
+    color: #00b100;
+}
+.order-status-c {
+    color: #0073ff;
+}
+
+/*-- Css for nicer display of order frequency statuses --*/
+.order-frequency-status-s {
+    color: #ff0000;
+}
+.order-frequency-status-a {
+    color: #00b100;
+}
+
+/*-- Css for nicer display of note statuses --*/
+.note-status-p {
+    color: #636363;
+}
+.note-status-n {
+    color: #ff0000;
+}
+.note-status-s {
+    color: #ff6600;
+}
+.note-status-a {
+    color: #00b100;
+}
+
+/*-- Colors used for various data presentation purposes --*/
+
+.blue {
+    color: #4b62ff;
+}
+.green {
+    color: #00b100;
+}
+.yellow {
+    color: #c0c400;
+}
+.orange {
+    color: #c46001;
+}
+.red {
+    color: #e34542;
+}
+
+hr.top {
+    margin-top: 0;
+    border-width: 2px;
+    border-color: #333;
+    text-align: left;
+}
+
+hr.article-devider {
+    border-width: 1px;
+    border-color: #444;
+    border-style: dashed;
+    text-align: left;
+}
+
+/*-- Password strength --*/
+
+/* hide strength meter so we can fade it in nicely with jQuery */
+.nz-meter-container {
+    display: none;
+}
+
+.nz-scorebar-border  {
+    background: none;
+    border: none;
+    height: 16px;
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 1px;
+}
+.nz-scorebar-border .nz-scorebar {
+    border-radius: 1px;
+}
+
+.nz-verdict>.label {
+    display: block;
+    font-size: 75%;
+    font-weight: lighter;
+    padding: 0.2em 0.6em;
+    line-height: 1;
+    border-radius: 1px;
+}
+
+.file-preview {
+    border: none;
+}
+
+/* small strength meter display tweaks for this theme */
+#form-signup table,
+#form-user table,
+#reset-password-form table {
+    background-color: transparent;
+}
+
+.order_create_form,
+.order_submit_form,
+.order_complete_form,
+.service_frequency_approve_form,
+.service_frequency_approve_form,
+.service_change_provider_form {
+    padding: 15px;
+}
+
+.navbar-brand {
+    padding: 10px;
+    line-height: 30px;
+}
+
+.navbar-brand >img {
+    width: 32px;
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+.navbar-brand >span {
+    color:#808080;
+}
+
+.input-group-addon{
+    /*border: none;*/
+}
+
+.form-control {
+    border-radius: 2px;
+}
+
+.main-header span{
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+
+/** AdminLte style */
+.main-header .logo {
+    padding: 0 6px;
+    text-decoration: none;
+}
+
+.select2-selection__rendered{
+    display: initial !important;
+}
+
+.box {
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.treeview-menu {
+    display: none;
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin: 0;
+}

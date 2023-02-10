@@ -1,0 +1,8 @@
+.per-page {
+    float: left;
+    margin: 20px;
+}
+
+.per-page .form-control {
+    height: 37px;
+}

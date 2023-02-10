@@ -1,0 +1,25 @@
+{
+  "name": "jquery-templates",
+  "version": "1.0.0",
+  "description": "The original official jQuery Templates plugin. This project was maintained by the jQuery team as an official jQuery plugin. It is no longer in active development, and will be superseded by JsRender.",
+  "main": "jquery.tmpl.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jquery.tmpl.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innwin/jquery-tmpl.git"
+  },
+  "keywords": [
+    "jquery.tmpl.js"
+  ],
+  "author": "innwin <innwin@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/innwin/jquery-tmpl/issues"
+  },
+  "homepage": "https://github.com/innwin/jquery-tmpl#readme"
+}

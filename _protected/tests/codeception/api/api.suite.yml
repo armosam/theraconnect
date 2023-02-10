@@ -1,0 +1,10 @@
+actor: ApiTester
+modules:
+  enabled:
+  - Yii2:
+      configFile: '../config/api/api.php'
+      entryUrl: 'http://localhost:8080/api/index-test.php'
+  - REST:
+      url:
+      depends: Yii2
+  - \tests\codeception\api\Helper\Api

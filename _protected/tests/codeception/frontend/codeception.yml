@@ -1,0 +1,30 @@
+namespace: tests\codeception\frontend
+actor: Tester
+paths:
+    tests: .
+    log: _output
+    data: _data
+    helpers: _support
+bootstrap: _bootstrap.php
+settings:
+    suite_class: \PHPUnit_Framework_TestSuite
+    colors: true
+    memory_limit: 1024M
+    log: true
+#coverage:
+#    enabled: true
+#    remote: true
+#    low_limit: 30
+#    high_limit: 60
+#    show_uncovered: true
+#    show_only_summary: false
+#    c3_url: 'http://127.0.0.1:8080/web/index-test.php'
+#    include:
+#        - ../frontend/*
+#    exclude:
+#        - ../frontend/config/*
+#        - ../frontend/runtime/*
+config:
+    # the entry script URL (with host info) for functional and acceptance tests
+    # PLEASE ADJUST IT TO THE ACTUAL ENTRY SCRIPT URL
+    test_entry_url: http://localhost:8080/web/index-test.php

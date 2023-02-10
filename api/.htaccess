@@ -1,0 +1,14 @@
+# add restriction to be viewed from search engins
+Header set X-Robots-Tag "noindex, nofollow, nosnippet, notranslate, noimageindex, noarchive, noodp"
+
+Options +FollowSymlinks -Indexes
+IndexIgnore */*
+
+RewriteEngine on
+RewriteBase /api/
+
+# If a directory or a file exists, use the request directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Otherwise forward the request to index.php
+RewriteRule . index.php

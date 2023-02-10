@@ -1,0 +1,77 @@
+# Codeception Test Suite Configuration
+
+# suite for acceptance tests.
+# perform tests in browser using the Selenium-like tools.
+# powered by Mink (http://mink.behat.org).
+# (tip: that's what your customer will see).
+# (tip: test your ajax and javascript by one of Mink drivers).
+
+# RUN `build` COMMAND AFTER ADDING/REMOVING MODULES.
+
+class_name: AcceptanceTester
+bootstrap: _bootstrap.php
+modules:
+    step_decorators:
+        - \Codeception\Step\ConditionalAssertion
+        - \Codeception\Step\TryTo
+    enabled:
+        - tests\codeception\common\_support\FixtureHelper
+        - PhpBrowser:
+            url: http://localhost:8080/web
+            curl:
+                CURLOPT_RETURNTRANSFER: true
+
+# You can use WebDriver instead of PhpBrowser to test javascript and ajax.
+# This will require you to install selenium. See http://codeception.com/docs/04-AcceptanceTests#Selenium
+# "restart" option is used by the WebDriver to start each time per test-file new session and cookies,
+# it is useful if you want to login in your app in each test.
+#
+# Run commands to start:
+#  On CentOS gust: selenium-server-standalone -role hub
+#  Windows Host: java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.50.5:4444/grid/register/ -port 5558 -browser browserName=chrome
+#  Linux Host: ./selenium-server-standalone -role node -hub http://192.168.50.5:4444/grid/register/ -Dwebdriver.chrome.driver=/vagrant/www/cgi-bin/tests/chromedriver
+#
+#        - WebDriver:
+#            url: http://192.168.50.5
+#            browser: chrome
+##            restart: true
+##            window_size: 1024x768
+#            capabilities:
+#                browserName: chrome
+#                acceptInsecureCerts: true
+#                unhandledPromptBehavior: 'dismiss and notify'
+#                marionette: true
+#                chromeOptions:
+#                    args: ["--no-sandbox", "--headless", "--disable-gpu"]
+
+# Run commands to start:
+#  On CentOS gust: selenium-server-standalone -role hub
+#  Windows Host: java -Dwebdriver.gecko.driver=geckodriver.exe -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.50.5:4444/grid/register/ -port 5556 -browser browserName=firefox
+#  Linux Host: ./selenium-server-standalone -role node -hub http://192.168.50.5:4444/grid/register/ -Dwebdriver.gecko.driver=/vagrant/www/cgi-bin/tests/geckodriver
+#        - WebDriver:
+#            url: http://192.168.50.5
+#            browser: firefox
+#            restart: true
+#            window_size: 1024x768
+#            wait: 3
+#            capabilities:
+#                browserName: firefox
+#                marionette: true
+#                acceptSslCerts: true,
+#                javascriptEnabled: true,
+#                takesScreenshot: false,
+#                acceptInsecureCerts: true
+#                unhandledPromptBehavior: 'dismiss and notify'
+
+# This is a config for different environments like screen will be as default
+# The mobile will have screen resolution 320x240
+# In test you have to add annotation @env screen or @env mobile to indicate environment for the tests
+# To run tests in the specific environment run: codecept run acceptance --env screen --env mobile.
+#
+#env:
+#    screen:
+#    mobile:
+#        modules:
+#           enabled:
+#               - WebDriver:
+#                   window_size: 320x240
